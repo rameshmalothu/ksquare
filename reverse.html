@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>7.23</title>
+    <meta charset= "utf-8">
+</head>
+<body>
+    <p><label>Input
+        <input type = "text" id = "s" size = "25">
+        </label>
+    </p>
+    <input type = "button" id = "r" value = "Reverse" onclick="String.prototype.reverse(this);">
+    <p id = "t"></p>
+    <script>
+        var s = document.getElementById("s").value;
+        String.prototype.reverse=function(){
+            return this.split("").reverse().join("");
+        }
+        document.getElementById("t").innerHTML = String.prototype.reverse(s);
+    </script>   
+</body>
+</html>
